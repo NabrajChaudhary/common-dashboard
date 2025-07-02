@@ -2,8 +2,6 @@ import { DataTable } from "@/modules/core/components/DataTable";
 import { ColumnDef } from "@tanstack/react-table";
 import React from "react";
 
-type Props = {};
-
 export type Payment = {
   id: string;
   amount: number;
@@ -89,7 +87,7 @@ export const payments: Payment[] = [
   },
 ];
 
-const DashboardModule = (props: Props) => {
+const DashboardModule = () => {
   return <DataTable columns={columns} data={payments} />;
 };
 

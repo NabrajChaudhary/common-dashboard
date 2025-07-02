@@ -18,7 +18,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/modules/core/components/ui/table";
-import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import React from "react";
 import {
@@ -52,7 +51,7 @@ export function DataTable<TData, TValue>({
     []
   );
   const [currentPageSize, setCurrentPageSize] = React.useState(initialPageSize);
-  const [pageIndex, setPageIndex] = React.useState(0);
+  const [pageIndex] = React.useState(0);
 
   const table = useReactTable({
     data,
@@ -72,7 +71,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="p-2">
-      {data.length !== 0 && (
+      {showFilter && data.length !== 0 && (
         <div className="flex items-center py-4">
           <Input
             placeholder="Filter emails..."

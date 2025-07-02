@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const SettingPage = (props: Props) => {
+const SettingPage = () => {
   return <div>SettingPage</div>;
 };
 

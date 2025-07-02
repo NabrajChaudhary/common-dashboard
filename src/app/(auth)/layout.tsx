@@ -3,16 +3,17 @@ import { Button } from "@/modules/core/components/ui/button";
 import { Card, CardContent } from "@/modules/core/components/ui/card";
 import { Input } from "@/modules/core/components/ui/input";
 import { Label } from "@/modules/core/components/ui/label";
-import { GalleryVerticalEnd } from "lucide-react";
+import Image from "next/image";
+
 import Link from "next/link";
 import React from "react";
 
 const AuthLayout = ({
-  children,
+  // children,
   className,
   ...props
 }: {
-  children: React.ReactNode;
+  // children: React.ReactNode;
   className: string;
 }) => {
   return (
@@ -59,7 +60,7 @@ const AuthLayout = ({
                 </div>
               </form>
               <div className="bg-muted relative hidden md:block">
-                <img
+                <Image
                   src="/login.jpg"
                   alt="Image"
                   className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
