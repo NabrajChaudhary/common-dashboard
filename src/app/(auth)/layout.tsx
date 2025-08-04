@@ -63,6 +63,8 @@ const AuthLayout = ({
                 <Image
                   src="/login.jpg"
                   alt="Image"
+                  width={100}
+                  height={100}
                   className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
                 />
               </div>

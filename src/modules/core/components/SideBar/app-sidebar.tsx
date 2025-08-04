@@ -42,6 +42,11 @@ const data = {
           url: "/dashboard/profile",
         },
         {
+          title: "Rooms",
+          icon: User,
+          url: "/dashboard/rooms",
+        },
+        {
           title: "Setting",
           icon: Settings,
           url: "/dashboard/setting",

@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const ForgetPasswordPage = (props: Props) => {
+const ForgetPasswordPage = () => {
   return <div>ForgetPasswordPage</div>;
 };
 

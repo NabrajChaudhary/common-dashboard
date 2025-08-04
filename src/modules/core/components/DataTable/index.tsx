@@ -37,6 +37,7 @@ interface DataTableProps<TData, TValue> {
   showPageSizeOptions?: boolean;
   pageSizeOptions?: Array<number>;
   showFilter?: boolean;
+  filterKey?: string;
 }
 
 export function DataTable<TData, TValue>({
@@ -46,6 +47,7 @@ export function DataTable<TData, TValue>({
   showPageSizeOptions = true,
   pageSizeOptions = [5, 10, 30],
   showFilter = true,
+  filterKey = "name",
 }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -75,9 +77,11 @@ export function DataTable<TData, TValue>({
         <div className="flex items-center py-4">
           <Input
             placeholder="Filter emails..."
-            value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+            value={
+              (table.getColumn(filterKey)?.getFilterValue() as string) ?? ""
+            }
             onChange={(event) =>
-              table.getColumn("email")?.setFilterValue(event.target.value)
+              table.getColumn(filterKey)?.setFilterValue(event.target.value)
             }
             className="max-w-sm"
           />
